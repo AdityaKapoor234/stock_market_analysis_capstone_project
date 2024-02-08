@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Market Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Project Heading -->
+  <div class="stockHeading">
+    Stock Market Analysis
+  </div>
+  <div class="stockBody">
+    <div>
+      <div class="stockChartBox">
+        <!-- Stock Chart -->
+        <canvas id="myChart" area-lavel="chart" role="img" width="700px" height="450px"></canvas>
+        <!-- Stock Minimum & Maximum Value -->
+        <div id="stockChartValue">
+        </div>
+        <!-- Buttons for Seecting Time Period -->
+        <div class="btn-container">
+          <button class="time-btn" id="onemtn" onclick="fetchData('1mo')">1 month</button>
+          <button class="time-btn" id="threemtn" onclick="fetchData('3mo')">3 months</button>
+          <button class="time-btn" id="oneYears" onclick="fetchData('1y')">1 year</button>
+          <button class="time-btn" id="fiveYears" onclick="fetchData('5y')">5 years</button>
+        </div>
+      </div>
+      <!-- Stock Summary Section -->
+      <div id="summary">
+        <div class="summaryHead">
+          <span id="name"></span>
+          &nbsp;&nbsp;&nbsp;
+          <span id="profit"></span>
+          &nbsp;&nbsp;&nbsp;
+          <span id="bookValue"></span>
+        </div>
+        <p id="summaryInfo"></p>
+      </div>
+    </div>
+    <div>
+      <!-- Side Bar for List of Stocks with Profit & Book Value -->
+      <table id="stock-list">
+      </table>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
