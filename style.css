@@ -73,3 +73,7 @@ canvas {
 .stockPad {
   padding: 0px 10px;
 }
+
+button {
+  cursor: pointer;
+}
